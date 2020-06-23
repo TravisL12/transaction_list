@@ -9,7 +9,7 @@ const DATE_FORMAT_OPTIONS = {
 
 function TransactionItem({ transaction, categories, saveMemo, saveCategory }) {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-  const [memoInputText, setMemoInputText] = useState(null);
+  const [memoInputText, setMemoInputText] = useState(transaction.memo);
 
   const {
     id,
@@ -120,7 +120,7 @@ function TransactionItem({ transaction, categories, saveMemo, saveCategory }) {
                 <textarea
                   onChange={updateMemoText}
                   placeholder="No memo for this transaction"
-                  value={memo || ""}
+                  value={memoInputText || ""}
                 ></textarea>
               </div>
               <div className="memo-submit">

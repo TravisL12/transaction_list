@@ -61,6 +61,12 @@ $brex-orange: rgb(255, 115, 79);
       color: $brex-orange;
       text-decoration: none;
     }
+
+    select {
+      color: $brex-orange;
+      background-color: transparent;
+      border: none;
+    }
   }
 }
 
